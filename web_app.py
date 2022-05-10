@@ -61,7 +61,7 @@ elif selected_page == '4G':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
             st.title("4G Summary Table")
-            image = Image.open("summary_4g_v3.png")
+            image = Image.open("summary_4g_v2.png")
             st.image(image)
     elif selected_page_2 == 'EARFCN Definition Check':
         col1, col2, col3 = st.columns([1, 5, 1])
@@ -1165,7 +1165,7 @@ elif selected_page == '2G':
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Same BSIC-BCCH Pairs within 5 km")
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "This item shows 2G cell pairs that have the same BCCH-BSIC value pair within a 5 km distance"
