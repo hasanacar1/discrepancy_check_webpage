@@ -62,7 +62,7 @@ elif selected_page == '4G':
         with col2 :
             st.title("4G Summary Table")
             image = Image.open("summary_4g_v3.png")
-            st.image(image,use_column_width=True)
+            st.image(image)
     elif selected_page_2 == 'EARFCN Definition Check':
         col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
