@@ -398,9 +398,7 @@ elif selected_page == '4G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-22'""", con=conn)
@@ -420,9 +418,7 @@ elif selected_page == '4G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-23'""", con=conn)
@@ -442,9 +438,7 @@ elif selected_page == '4G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-24'""", con=conn)
@@ -465,8 +459,6 @@ elif selected_page == '4G':
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-25'""", con=conn)
@@ -1060,7 +1052,7 @@ elif selected_page == '3G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "A redundant external cell is one that has been configured as an external cell of an NE but no neighboring relationship has been set up between the external cell and any cell under the NE."
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-57'""", con=conn)
@@ -1079,7 +1071,7 @@ elif selected_page == '3G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "A redundant external cell is one that has been configured as an external cell of an NE but no neighboring relationship has been set up between the external cell and any cell under the NE."
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-58'""", con=conn)
@@ -1098,7 +1090,7 @@ elif selected_page == '3G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "A redundant external cell is one that has been configured as an external cell of an NE but no neighboring relationship has been set up between the external cell and any cell under the NE."
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-59'""", con=conn)
@@ -1498,9 +1490,7 @@ elif selected_page == '2G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "A redundant external cell is one that has been configured as an external cell of an NE but no neighboring relationship has been set up between the external cell and any cell under the NE."
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
@@ -1519,9 +1509,7 @@ elif selected_page == '2G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "A redundant external cell is one that has been configured as an external cell of an NE but no neighboring relationship has been set up between the external cell and any cell under the NE."
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
@@ -1540,9 +1528,7 @@ elif selected_page == '2G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "A redundant external cell is one that has been configured as an external cell of an NE but no neighboring relationship has been set up between the external cell and any cell under the NE."
                         "</p>", unsafe_allow_html=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
