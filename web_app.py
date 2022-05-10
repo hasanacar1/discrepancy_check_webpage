@@ -37,7 +37,7 @@ with header:
 
 with c1:
      st.sidebar.title("Navigation")
-     selected_page = st.sidebar.radio("Which tech would you like to go to", options=["Overall", "2G", "3G", "4G", "5G"])
+     selected_page = st.sidebar.radio("Which tech would you like to go to", options=["Overall", "2G", "3G", "4G"])
 
      #selected_page = st.selectbox("Which page would you like to go to?", options=["Resume", "Telecommunication", "Data Science", "Map Visualization", "Computer Vision"])
      #st.sidebar.title("Operator Selection")
@@ -64,9 +64,11 @@ elif selected_page == '4G':
             image = Image.open("summary_4g_v2.png")
             st.image(image)
     elif selected_page_2 == 'EARFCN Definition Check':
-        col1, col2, col3 = st.columns([1, 10, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("EARFCN Definition Check")
+        col1, col2, col3 = st.columns([1, 10, 1])
+        with col2:
             st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "This item indicates cases where the defined EARFCN and bandwidth of the cells are incompatible with the operator strategy."
                         "</p>", unsafe_allow_html=True)
@@ -76,7 +78,7 @@ elif selected_page == '4G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=['Missing Co-site Same EARFCN Neighbours','Cells_Without_Any_IRAT_3G_neighbor_relationship','4G Cells without neighbours', '4G Cells without any incoming neighbours','LTE-3G CoSite Missing Neighbor Relations','LTE-3G Invalid Neighbor Relations', 'LTE-3G Redundant Frequency', 'LTE-2G Unidirectional neighboring relationship check in LTE','LTE-3G Unidirectional neighboring relationship check in LTE','LTE-LTE Unidirectional Intra neighboring relationship check in LTE','LTE-LTE Unidirectional Inter neighboring relationship check in LTE'])
         if selected_page_3 == 'Missing Co-site Same EARFCN Neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2 :
                 st.title("Missing Co-site Same EARFCN Neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -99,7 +101,7 @@ elif selected_page == '4G':
                      file_name='Missing Co-site Same EARFCN Neighbours.txt',
                  )
         elif selected_page_3 == 'Cells_Without_Any_IRAT_3G_neighbor_relationship' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2 :
                 st.title("Cells Without Any IRAT 3G neighbor relationship")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -122,7 +124,7 @@ elif selected_page == '4G':
                      file_name='Cells_Without_Any_IRAT_3G_neighbor_relationship.txt'
                  )
         elif selected_page_3 == '4G Cells without neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2 :
                 st.title("4G Cells without neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -145,7 +147,7 @@ elif selected_page == '4G':
                      file_name='4G Cells without neighbours.txt',
                  )
         elif selected_page_3 == '4G Cells without any incoming neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2 :
                 st.title("4G Cells without any incoming neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -159,7 +161,7 @@ elif selected_page == '4G':
                 st.image(image,use_column_width=True)
                 st.title("There is no case")
         elif selected_page_3 == 'LTE-3G CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2 :
                 st.title("LTE-3G CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -182,7 +184,7 @@ elif selected_page == '4G':
                      file_name='LTE-3G CoSite Missing Neighbor Relations.txt',
                  )
         elif selected_page_3 == 'LTE-3G Invalid Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("LTE-3G Invalid Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -203,7 +205,7 @@ elif selected_page == '4G':
                      file_name='LTE-3G Invalid Neighbor Relations.txt',
                  )
         elif selected_page_3 == 'LTE-3G Redundant Frequency' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("LTE-3G Redundant Frequency")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -224,7 +226,7 @@ elif selected_page == '4G':
                      file_name='LTE-3G Redundant Frequency.txt',
                  )
         elif selected_page_3 == 'LTE-2G Unidirectional neighboring relationship check in LTE' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("LTE-2G Unidirectional neighboring relationship check in LTE")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -247,7 +249,7 @@ elif selected_page == '4G':
                      file_name='LTE-2G Unidirectional neighboring relationship check in LTE.txt',
                  )
         elif selected_page_3 == 'LTE-3G Unidirectional neighboring relationship check in LTE' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("LTE-3G Unidirectional neighboring relationship check in LTE")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -270,7 +272,7 @@ elif selected_page == '4G':
                      file_name='LTE-3G Unidirectional neighboring relationship check in LTE.txt',
                  )
         elif selected_page_3 == 'LTE-LTE Unidirectional Intra neighboring relationship check in LTE' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("LTE-LTE Unidirectional Intra neighboring relationship check in LTE")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -293,7 +295,7 @@ elif selected_page == '4G':
                      file_name='LTE-LTE Unidirectional Intra neighboring relationship check in LTE.txt',
                  )
         elif selected_page_3 == 'LTE-LTE Unidirectional Inter neighboring relationship check in LTE' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("LTE-LTE Unidirectional Inter neighboring relationship check in LTE")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -316,7 +318,7 @@ elif selected_page == '4G':
                      file_name='LTE-LTE Unidirectional Inter neighboring relationship check in LTE.txt',
                  )
     elif selected_page_2 == 'PCI clash':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("PCI clash")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -337,7 +339,7 @@ elif selected_page == '4G':
                  file_name='PCI clash.txt',
              )
     elif selected_page_2 == 'RSI clash':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("RSI clash")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -357,7 +359,7 @@ elif selected_page == '4G':
                  mime='text/csv',
              )
     elif selected_page_2 == '256QAM Switch Check':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("256QAM Switch Check")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -376,7 +378,7 @@ elif selected_page == '4G':
                  file_name='256QAM Switch Check.txt',
              )
     elif selected_page_2 == 'eNodeB ID Duplication':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("eNodeB ID Duplication")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -390,7 +392,7 @@ elif selected_page == '4G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=['External Definitions Check (BSIC/BCCH)  - (4G to 2G)', 'External Definitions Check (LAC/PSC/DLUARFCN) - (4G to 3G)', 'External Definitions Check (PCI/TAC/DLEARFCN)  - (4G to 4G)', 'External Definition Check (Redundant Cells) -  (4G to 3G)'])
         if selected_page_3 == 'External Definitions Check (BSIC/BCCH)  - (4G to 2G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (BSIC/BCCH) - (4G to 2G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -412,7 +414,7 @@ elif selected_page == '4G':
                      mime='text/csv',
                  )
         elif selected_page_3 == 'External Definitions Check (LAC/PSC/DLUARFCN) - (4G to 3G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (LAC/PSC/DLUARFCN) - (4G to 3G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -434,7 +436,7 @@ elif selected_page == '4G':
                      mime='text/csv',
                  )
         elif selected_page_3 == 'External Definitions Check (PCI/TAC/DLEARFCN)  - (4G to 4G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (PCI/TAC/DLEARFCN) - (4G to 4G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -456,7 +458,7 @@ elif selected_page == '4G':
                      mime='text/csv',
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (4G to 3G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (4G to 3G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -491,7 +493,7 @@ elif selected_page == '3G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Same PSC Pairs within 3 km","3G Same PSC in Source and Tier Neighbour","3G Same PSC in Source and Neighbours of Neighbour"])
         if selected_page_3 == 'Same PSC Pairs within 3 km' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Same PSC Pairs within 3 km")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -514,7 +516,7 @@ elif selected_page == '3G':
                      file_name='PSC_clash.txt'
                  )
         elif selected_page_3 == '3G Same PSC in Source and Tier Neighbour' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G Same PSC in Source and Tier Neighbour")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -540,7 +542,7 @@ elif selected_page == '3G':
                      file_name='PSC_clash.txt'
                  )
         elif selected_page_3 == '3G Same PSC in Source and Neighbours of Neighbour' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G Same PSC in Source and Neighbours of Neighbour")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -567,7 +569,7 @@ elif selected_page == '3G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Missing Co-Site same UARFCN Neighbours","3G Cells without neighbours","3G Cells without any incoming neighbours","3G-LTE CoSite Missing Neighbor Relations","3G-3G CoSite Missing Neighbor Relations","3G-2G CoSite Missing Neighbor Relations","3G-3G Multi Carrier Neighbor Cells","3G-2G Multi Carrier Neighbor Cells","3G Invalid Neighbor Relations","3G-3G unidirectional Intra neighboring relationship check in UMTS","3G-3G unidirectional Inter neighboring relationship check in UMTS","3G-2G unidirectional neighboring relationship check in UMTS","3G-LTE unidirectional neighboring relationship check in UMTS"])
         if selected_page_3 == 'Missing Co-Site same UARFCN Neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Missing Co-Site same UARFCN Neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -590,7 +592,7 @@ elif selected_page == '3G':
                      file_name='Missing Co-Site same UARFCN Neighbours.txt'
                  )
         elif selected_page_3 == '3G Cells without neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G Cells without neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -613,7 +615,7 @@ elif selected_page == '3G':
                      file_name='3G Cells without neighbours.txt'
                  )
         elif selected_page_3 == '3G Cells without any incoming neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G Cells without any incoming neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -636,7 +638,7 @@ elif selected_page == '3G':
                      file_name='3G Cells without any incoming neighbours.txt'
                  )
         elif selected_page_3 == '3G-LTE CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-LTE CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -659,7 +661,7 @@ elif selected_page == '3G':
                      file_name='3G-LTE CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '3G-3G CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-3G CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -682,7 +684,7 @@ elif selected_page == '3G':
                      file_name='3G-3G CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '3G-2G CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-2G CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -705,7 +707,7 @@ elif selected_page == '3G':
                      file_name='3G-2G CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '3G-3G Multi Carrier Neighbor Cells' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-3G Multi Carrier Neighbor Cells")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -728,7 +730,7 @@ elif selected_page == '3G':
                      file_name='3G-3G Multi Carrier Neighbor Cells.txt'
                  )
         elif selected_page_3 == '3G-2G Multi Carrier Neighbor Cells' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-2G Multi Carrier Neighbor Cells")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -751,7 +753,7 @@ elif selected_page == '3G':
                      file_name='3G-2G Multi Carrier Neighbor Cells.txt'
                  )
         elif selected_page_3 == '3G Invalid Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G Invalid Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -776,7 +778,7 @@ elif selected_page == '3G':
                      file_name='3G Invalid Neighbor Relations.txt',
                  )
         elif selected_page_3 == '3G-3G unidirectional Intra neighboring relationship check in UMTS' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-3G unidirectional Intra neighboring relationship check in UMTS")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -799,7 +801,7 @@ elif selected_page == '3G':
                      file_name='3G-3G unidirectional Intra neighboring relationship check in UMTS.txt',
                  )
         elif selected_page_3 == '3G-3G unidirectional Inter neighboring relationship check in UMTS' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-3G unidirectional Inter neighboring relationship check in UMTS")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -822,7 +824,7 @@ elif selected_page == '3G':
                      file_name='3G-3G unidirectional Inter neighboring relationship check in UMTS.txt',
                  )
         elif selected_page_3 == '3G-2G unidirectional neighboring relationship check in UMTS' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-2G unidirectional neighboring relationship check in UMTS")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -845,7 +847,7 @@ elif selected_page == '3G':
                      file_name='3G-2G unidirectional neighboring relationship check in UMTS.txt',
                  )
         elif selected_page_3 == '3G-LTE unidirectional neighboring relationship check in UMTS' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G-LTE unidirectional neighboring relationship check in UMTS")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -868,7 +870,7 @@ elif selected_page == '3G':
                      file_name='3G-LTE unidirectional neighboring relationship check in UMTS.txt'
                  )
     elif selected_page_2 == 'Duplicate_3G_LAC-CI':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2 :
             st.title("Duplicate_3G_LAC-CI")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -878,7 +880,7 @@ elif selected_page == '3G':
                         "</p>", unsafe_allow_html=True)
             st.title("There is no case")
     elif selected_page_2 == 'Co-Sector Chip Rate (Tcell) Check':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2 :
             st.title("Co-Sector Chip Rate (Tcell) Check")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -897,7 +899,7 @@ elif selected_page == '3G':
                  file_name='Co-Sector Chip Rate (Tcell) Check.txt'
              )
     elif selected_page_2 == 'Power InConsistencies':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Non-Standard CPICH Power Setting (CPICH Power/ Total Power <%5)", "Non-Standard CPICH Power Setting (CPICH Power/Total Power  >%15)", "maxpwr > maxtxpower  (power mismatch between nodeb &rnc)", "maxpwr < maxtxpower (power mismatch between nodeb &rnc)"])
         if selected_page_3 == 'Non-Standard CPICH Power Setting (CPICH Power/ Total Power <%5)' :
@@ -972,7 +974,7 @@ elif selected_page == '3G':
 
                 st.title("There is no case")
     elif selected_page_2 == '64QAM Switch Check':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2 :
             st.title("64QAM Switch Check")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -995,7 +997,7 @@ elif selected_page == '3G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["External Definitions Check (BSIC/BCCH) - (3G to 2G)","External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G)","External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G)","External Definition Check (Redundant Cells) -  (3G to 3G)","External Definition Check (Redundant Cells) -  (3G to 4G)","External Definition Check (Redundant Cells) -  (3G to 2G)"])
         if selected_page_3 == 'External Definitions Check (BSIC/BCCH) - (3G to 2G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (BSIC/BCCH) - (3G to 2G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1014,7 +1016,7 @@ elif selected_page == '3G':
                      file_name='External Definitions Check (BSIC/BCCH) - (3G to 2G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1033,7 +1035,7 @@ elif selected_page == '3G':
                      file_name='External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1052,7 +1054,7 @@ elif selected_page == '3G':
                      file_name='External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (3G to 3G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (3G to 3G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1071,7 +1073,7 @@ elif selected_page == '3G':
                      file_name='External Definition Check (Redundant Cells) -  (3G to 3G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (3G to 4G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (3G to 4G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1090,7 +1092,7 @@ elif selected_page == '3G':
                      file_name='External Definition Check (Redundant Cells) -  (3G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (3G to 2G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (3G to 2G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1109,7 +1111,7 @@ elif selected_page == '3G':
                      file_name='External Definition Check (Redundant Cells) -  (3G to 2G).txt'
                  )
     elif selected_page_2 == 'Radio Data Consistency':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2 :
             st.title("Check Consistency of LOCELL")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -1141,7 +1143,7 @@ elif selected_page == '2G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Same BCCH Pairs Within 2 km", "Same BSIC-BCCH Pairs within 5 km"])
         if selected_page_3 == 'Same BCCH Pairs Within 2 km' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Same BCCH Pairs Within 2 km")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1160,7 +1162,7 @@ elif selected_page == '2G':
                      file_name='Same BCCH Pairs Within 2 km.txt'
                  )
         elif selected_page_3 == 'Same BSIC-BCCH Pairs within 5 km' :
-            col1, col2, col3 = st.columns([1, 10, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Same BSIC-BCCH Pairs within 5 km")
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1183,7 +1185,7 @@ elif selected_page == '2G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Missing Co-Site IntraBand 2G Neighbours","2G Cells without neighbours","2G Cells without any incoming neighbours","Same BCCH in Source and Neighbors","Same BCCH-BSIC in Source and Neighbors","Same BCCH-BSIC Pairs in source Cells' Neighbours","2G-LTE CoSite Missing Neighbor Relations","2G-3G CoSite Missing Neighbor Relations","2G-2G CoSite Missing Neighbor Relations","2G-2G unidirectional neighboring relationship check in GSM","2G-3G unidirectional neighboring relationship check in GSM","2G-LTE unidirectional neighboring relationship check in GSM"])
         if selected_page_3 == 'Missing Co-Site IntraBand 2G Neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Missing Co-Site IntraBand 2G Neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1195,7 +1197,7 @@ elif selected_page == '2G':
                 st.image(image,use_column_width=True)
                 st.title("There is no case")
         elif selected_page_3 == '2G Cells without neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G Cells without neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1207,7 +1209,7 @@ elif selected_page == '2G':
                 st.image(image,use_column_width=True)
                 st.title("There is no case")
         elif selected_page_3 == '2G Cells without any incoming neighbours' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G Cells without any incoming neighbour")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1219,7 +1221,7 @@ elif selected_page == '2G':
                 st.image(image,use_column_width=True)
                 st.title("There is no case")
         elif selected_page_3 == 'Same BCCH in Source and Neighbors' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Same BCCH in Source and Neighbors")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1242,7 +1244,7 @@ elif selected_page == '2G':
                      file_name='Same BCCH in Source and Neighbors.txt'
                  )
         elif selected_page_3 == "Same BCCH-BSIC Pairs in source Cells' Neighbours" :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Same BCCH-BSIC Pairs in source Cells' Neighbours")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1254,7 +1256,7 @@ elif selected_page == '2G':
                 st.image(image,use_column_width=True)
                 st.title("There is no case")
         elif selected_page_3 == '2G-LTE CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G-LTE CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1275,7 +1277,7 @@ elif selected_page == '2G':
                      file_name='2G-LTE CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '2G-3G CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G-3G CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1296,7 +1298,7 @@ elif selected_page == '2G':
                      file_name='2G-3G CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '2G-2G CoSite Missing Neighbor Relations' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G-2G CoSite Missing Neighbor Relations")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1317,7 +1319,7 @@ elif selected_page == '2G':
                      file_name='2G-2G CoSite Missing Neighbor Relations.txt',
                  )
         elif selected_page_3 == '2G-2G unidirectional neighboring relationship check in GSM' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G-2G unidirectional neighboring relationship check in GSM")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1338,7 +1340,7 @@ elif selected_page == '2G':
                      file_name='2G-2G unidirectional neighboring relationship check in GSM.txt',
                  )
         elif selected_page_3 == '2G-3G unidirectional neighboring relationship check in GSM' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G-3G unidirectional neighboring relationship check in GSM")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1359,7 +1361,7 @@ elif selected_page == '2G':
                      file_name='2G-3G unidirectional neighboring relationship check in GSM.txt',
                  )
         elif selected_page_3 == '2G-LTE unidirectional neighboring relationship check in GSM' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("2G-LTE unidirectional neighboring relationship check in GSM")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1380,7 +1382,7 @@ elif selected_page == '2G':
                      file_name='2G-LTE unidirectional neighboring relationship check in GSM.txt',
                  )
     elif selected_page_2 == 'Power Inconsistency':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("Check GSMCELL Trx Power Consistency")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -1399,7 +1401,7 @@ elif selected_page == '2G':
                  file_name='Check GSMCELL Trx Power Consistency.txt'
              )
     elif selected_page_2 == 'Cell Frequency not in MA list':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("Cell Frequency not in MA list")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -1417,7 +1419,7 @@ elif selected_page == '2G':
                  data=csv,
                  file_name='Cell Frequency not in MA list.txt',)
     elif selected_page_2 == 'Cell Frequency not in BA list':
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([1, 5, 1])
         with col2:
             st.title("Cell Frequency not in BA list")
         col1, col2, col3 = st.columns([1, 10, 1])
@@ -1431,7 +1433,7 @@ elif selected_page == '2G':
         with col2 :
             selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["External Definitions Check (BSIC/BCCH) - (2G to 2G)","External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G)","External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G)","External Definition Check (Redundant Cells) -  (2G to 2G)","External Definition Check (Redundant Cells) -  (2G to 4G)","External Definition Check (Redundant Cells) -  (2G to 3G)"])
         if selected_page_3 == 'External Definitions Check (BSIC/BCCH) - (2G to 2G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (BSIC/BCCH) - (2G to 2G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1450,7 +1452,7 @@ elif selected_page == '2G':
                      file_name='External Definitions Check (BSIC/BCCH) - (2G to 2G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1469,7 +1471,7 @@ elif selected_page == '2G':
                      file_name='External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1490,7 +1492,7 @@ elif selected_page == '2G':
                      file_name='External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (2G to 2G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (2G to 2G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1511,7 +1513,7 @@ elif selected_page == '2G':
                      file_name='External Definition Check (Redundant Cells) -  (2G to 2G).txt',
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (2G to 4G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (2G to 4G)")
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1532,7 +1534,7 @@ elif selected_page == '2G':
                      file_name='External Definition Check (Redundant Cells) -  (2G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (2G to 3G)' :
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("External Definition Check (Redundant Cells) -  (2G to 3G)")
             col1, col2, col3 = st.columns([1, 10, 1])
