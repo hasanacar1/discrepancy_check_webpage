@@ -493,7 +493,7 @@ elif selected_page == '3G':
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "This item shows 3G Cells whose PSC value is the same with another 3G cell within a distance less than 3 km "
                         "</p>", unsafe_allow_html=True)
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 image = Image.open("item_png/PSC_clash.png")
                 st.image(image,use_column_width=True)
@@ -514,11 +514,9 @@ elif selected_page == '3G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "This item shows 3G Cells whose PSC value is shared by another 3G neighbor of one of the neighbors of the source cell. In other words, when a 3G Cell 'A' with PSC = XX has a neighbor 'B' with PSC=YY, and Cell 'B' has another neighbor cell 'C' with also PSC=XX"
                         "</p>", unsafe_allow_html=True)
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("3G Same PSC in Source and Tier Neighbour")
                 image = Image.open("item_png/PSC_clash.png")
@@ -540,9 +538,9 @@ elif selected_page == '3G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "This item shows 3G Cells whose PSC value is shared by another 3G neighbor of one of the neighbors of the source cell. In other words, when a 3G Cell 'A' with PSC = XX has a neighbor 'B' with PSC=YY, and Cell 'B' has another neighbor cell 'C' with also PSC=XX"
+                        "This item shows cell 'A' and 3G cell pairs with same PSC value that have respectively neighbor relation with cell 'B' and cell 'C'."
                         "</p>", unsafe_allow_html=True)
-            col1, col2, col3 = st.columns([1, 2, 1])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 image = Image.open("item_png/psc_n_of_n.png")
                 st.image(image,use_column_width=True)
@@ -1175,7 +1173,7 @@ elif selected_page == '2G':
     elif selected_page_2 == 'Neighbor Relation Discrepancies':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
-            selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Missing Co-Site IntraBand 2G Neighbours","2G Cells without neighbours","2G Cells without any incoming neighbours","Same BCCH in Source and Neighbors","Same BCCH-BSIC in Source and Neighbors","Same BCCH-BSIC Pairs in source Cells' Neighbours","2G-LTE CoSite Missing Neighbor Relations","2G-3G CoSite Missing Neighbor Relations","2G-2G CoSite Missing Neighbor Relations","2G-2G unidirectional neighboring relationship check in GSM","2G-3G unidirectional neighboring relationship check in GSM","2G-LTE unidirectional neighboring relationship check in GSM"])
+            selected_page_3 = st.selectbox("Which discrepancy would you like to go to", options=["Missing Co-Site IntraBand 2G Neighbours","2G Cells without neighbours","2G Cells without any incoming neighbours","Same BCCH in Source and Neighbors", "Same BCCH-BSIC Pairs in source Cells' Neighbours","2G-LTE CoSite Missing Neighbor Relations","2G-3G CoSite Missing Neighbor Relations","2G-2G CoSite Missing Neighbor Relations","2G-2G unidirectional neighboring relationship check in GSM","2G-3G unidirectional neighboring relationship check in GSM","2G-LTE unidirectional neighboring relationship check in GSM"])
         if selected_page_3 == 'Missing Co-Site IntraBand 2G Neighbours' :
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
@@ -1207,7 +1205,7 @@ elif selected_page == '2G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "This item shows 2G Cells that do not have any incoming neighboring relationships. Incoming indicates a handover from another cell to the mentioned cell."
+                        "This item shows 2G Cells that do not have any incoming neighboring relationships. Incoming indicates a handover from another cell to the source cell."
                         "</p>", unsafe_allow_html=True)
                 image = Image.open("item_png/2G Cells without any incoming neighbour.png")
                 st.image(image,use_column_width=True)
@@ -1219,9 +1217,7 @@ elif selected_page == '2G':
             col1, col2, col3 = st.columns([1, 10, 1])
             with col2:
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                        "This item shows 2G neighbor cell pairs with same BCCH"
                         "</p>", unsafe_allow_html=True)
                 image = Image.open("item_png/Same BCCH in Source and Neighbors.png")
                 st.image(image,use_column_width=True)
