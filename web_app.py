@@ -1123,7 +1123,7 @@ elif selected_page == '3G':
              )
 elif selected_page == '2G':
     st.sidebar.title("Category")
-    selected_page_2 = st.sidebar.radio("Which discrepancy would you like to go to", options=["2G Summary", "BSIC-BCCH Inconsistency", "Neighbor Relation Discrepancies", "Power Inconsistency", "Cell Frequency not in MA and BA list", "External Definition Check"])
+    selected_page_2 = st.sidebar.radio("Which discrepancy would you like to go to", options=["2G Summary", "BSIC-BCCH Inconsistency", "Neighbor Relation Discrepancies", "Power Inconsistency", "Cell Frequency not in MA list", "Cell Frequency not in BA list", "External Definition Check"])
     if selected_page_2 == '2G Summary':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
