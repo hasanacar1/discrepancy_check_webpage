@@ -518,7 +518,6 @@ elif selected_page == '3G':
                         "</p>", unsafe_allow_html=True)
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
-                st.title("3G Same PSC in Source and Tier Neighbour")
                 image = Image.open("item_png/PSC_clash.png")
                 st.image(image,use_column_width=True)
                 st.title("RESULTS")
