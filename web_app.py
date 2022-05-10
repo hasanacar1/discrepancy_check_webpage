@@ -37,7 +37,7 @@ with header:
 
 with c1:
      st.sidebar.title("Navigation")
-     selected_page = st.sidebar.radio("Which tech would you like to go to", options=["Overall", "2G", "3G", "4G", "5G"])
+     selected_page = st.sidebar.radio("Which tech would you like to go to", options=["Overall", "2G", "3G", "4G"])
 
      #selected_page = st.selectbox("Which page would you like to go to?", options=["Resume", "Telecommunication", "Data Science", "Map Visualization", "Computer Vision"])
      #st.sidebar.title("Operator Selection")
