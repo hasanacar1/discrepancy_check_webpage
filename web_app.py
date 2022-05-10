@@ -37,7 +37,7 @@ with header:
 
 with c1:
      st.sidebar.title("Navigation")
-     selected_page = st.sidebar.radio("Which tech would you like to go to", options=["Overall", "2G", "3G", "4G"])
+     selected_page = st.sidebar.radio("Which tech would you like to go to", options=["Overall", "2G", "3G", "4G", "5G"])
 
      #selected_page = st.selectbox("Which page would you like to go to?", options=["Resume", "Telecommunication", "Data Science", "Map Visualization", "Computer Vision"])
      #st.sidebar.title("Operator Selection")
@@ -51,15 +51,16 @@ with c1:
 if selected_page == 'Overall':
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2 :
+        st.title("Summary Table")
         image = Image.open("summary_table_v2.png")
         st.image(image)
-
 elif selected_page == '4G':
     st.sidebar.title("Category")
-    selected_page_2 = st.sidebar.radio("Which discrepancy would you like to go to", options=["4G Summary", "Neighbor Relations","EARFCN Definition Check", "PCI clash", "RSI clash", "TAC-LAC Mapping","Tilt Discrepancies","256QAM Switch Check","eNodeB ID Duplication","External Definition Discrepancies"])
+    selected_page_2 = st.sidebar.radio("Which discrepancy would you like to go to", options=["4G Summary", "Neighbor Relations","EARFCN Definition Check", "PCI clash", "RSI clash", "256QAM Switch Check","eNodeB ID Duplication","External Definition Discrepancies"])
     if selected_page_2 == '4G Summary':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
+            st.title("4G Summary Table")
             image = Image.open("summary_4g_v2.png")
             st.image(image)
     elif selected_page_2 == 'EARFCN Definition Check':
@@ -93,10 +94,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Missing Co-site Same EARFCN Neighbours.csv',
-                     mime='text/csv',
+                     file_name='Missing Co-site Same EARFCN Neighbours.txt',
                  )
         elif selected_page_3 == 'Cells_Without_Any_IRAT_3G_neighbor_relationship' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -117,10 +117,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Cells_Without_Any_IRAT_3G_neighbor_relationship.csv',
-                     mime='text/csv',
+                     file_name='Cells_Without_Any_IRAT_3G_neighbor_relationship.txt'
                  )
         elif selected_page_3 == '4G Cells without neighbours' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -141,10 +140,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='4G Cells without neighbours.csv',
-                     mime='text/csv',
+                     file_name='4G Cells without neighbours.txt',
                  )
         elif selected_page_3 == '4G Cells without any incoming neighbours' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -179,10 +177,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-3G CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='LTE-3G CoSite Missing Neighbor Relations.txt',
                  )
         elif selected_page_3 == 'LTE-3G Invalid Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -201,10 +198,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-3G Invalid Neighbor Relations.xls',
-                     mime='text/csv',
+                     file_name='LTE-3G Invalid Neighbor Relations.txt',
                  )
         elif selected_page_3 == 'LTE-3G Redundant Frequency' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -223,10 +219,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-3G Redundant Frequency',
-                     mime='text/csv',
+                     file_name='LTE-3G Redundant Frequency.txt',
                  )
         elif selected_page_3 == 'LTE-2G Unidirectional neighboring relationship check in LTE' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -247,10 +242,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-2G Unidirectional neighboring relationship check in LTE.csv',
-                     mime='text/csv',
+                     file_name='LTE-2G Unidirectional neighboring relationship check in LTE.txt',
                  )
         elif selected_page_3 == 'LTE-3G Unidirectional neighboring relationship check in LTE' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -271,10 +265,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-3G Unidirectional neighboring relationship check in LTE.csv',
-                     mime='text/csv',
+                     file_name='LTE-3G Unidirectional neighboring relationship check in LTE.txt',
                  )
         elif selected_page_3 == 'LTE-LTE Unidirectional Intra neighboring relationship check in LTE' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -295,10 +288,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-LTE Unidirectional Intra neighboring relationship check in LTE.csv',
-                     mime='text/csv',
+                     file_name='LTE-LTE Unidirectional Intra neighboring relationship check in LTE.txt',
                  )
         elif selected_page_3 == 'LTE-LTE Unidirectional Inter neighboring relationship check in LTE' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -319,10 +311,9 @@ elif selected_page == '4G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='LTE-LTE Unidirectional Inter neighboring relationship check in LTE.csv',
-                     mime='text/csv',
+                     file_name='LTE-LTE Unidirectional Inter neighboring relationship check in LTE.txt',
                  )
     elif selected_page_2 == 'PCI clash':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -341,10 +332,9 @@ elif selected_page == '4G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='PCI clash.csv',
-                 mime='text/csv',
+                 file_name='PCI clash.txt',
              )
     elif selected_page_2 == 'RSI clash':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -361,9 +351,9 @@ elif selected_page == '4G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='RSI clash.csv',
+                 file_name='RSI clash.txt',
                  mime='text/csv',
              )
     elif selected_page_2 == '256QAM Switch Check':
@@ -381,10 +371,9 @@ elif selected_page == '4G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='256QAM Switch Check.csv',
-                 mime='text/csv'
+                 file_name='256QAM Switch Check.txt',
              )
     elif selected_page_2 == 'eNodeB ID Duplication':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -395,17 +384,7 @@ elif selected_page == '4G':
             st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "This item shows eNodeB ID values that are assigned to more than one cells in the network"
                         "</p>", unsafe_allow_html=True)
-            st.title("RESULTS")
-            df = pd.read_sql("""select * from 'ITEM-21'""", con=conn)
-            df.drop('index', inplace=True, axis=1)
-            st.dataframe(df)
-            csv = convert_df(df)
-            st.download_button(
-                 label="Download data as CSV",
-                 data=csv,
-                 file_name='eNodeB ID Duplication.csv',
-                 mime='text/csv',
-             )
+            st.title("There is no case")
     elif selected_page_2 == 'External Definition Discrepancies':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
@@ -500,10 +479,11 @@ elif selected_page == '4G':
                  )
 elif selected_page == '3G':
     st.sidebar.title("Category")
-    selected_page_2 = st.sidebar.radio("Which discrepancy would you like to go to", options=["3G Summary", "PSC Clash","Neighbor Relation Discrepancies","Duplicate_3G_LAC-CI","Co-Sector Chip Rate (Tcell) Check","Tilt Discrepancies","Power InConsistencies","64QAM Switch Check","External Definitions Check", "Radio Data Consistency"])
+    selected_page_2 = st.sidebar.radio("Which discrepancy would you like to go to", options=["3G Summary", "PSC Clash","Neighbor Relation Discrepancies","Duplicate_3G_LAC-CI","Co-Sector Chip Rate (Tcell) Check", "Power InConsistencies","64QAM Switch Check","External Definitions Check", "Radio Data Consistency"])
     if selected_page_2 == '3G Summary':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
+            st.title("3G Summary Table")
             image = Image.open("summary_3g_v2.png")
             st.image(image)
     elif selected_page_2 == 'PSC Clash':
@@ -529,10 +509,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='PSC_clash.csv',
-                     mime='text/csv',
+                     file_name='PSC_clash.txt'
                  )
         elif selected_page_3 == '3G Same PSC in Source and Tier Neighbour' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -556,10 +535,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='PSC_clash.csv',
-                     mime='text/csv',
+                     file_name='PSC_clash.txt'
                  )
         elif selected_page_3 == '3G Same PSC in Source and Neighbours of Neighbour' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -580,10 +558,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='PSC_clash.csv',
-                     mime='text/csv',
+                     file_name='PSC_clash.txt'
                  )
     elif selected_page_2 == 'Neighbor Relation Discrepancies':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -608,10 +585,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Missing Co-Site same UARFCN Neighbours.csv',
-                     mime='text/csv',
+                     file_name='Missing Co-Site same UARFCN Neighbours.txt'
                  )
         elif selected_page_3 == '3G Cells without neighbours' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -632,10 +608,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G Cells without neighbours.csv',
-                     mime='text/csv',
+                     file_name='3G Cells without neighbours.txt'
                  )
         elif selected_page_3 == '3G Cells without any incoming neighbours' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -656,10 +631,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G Cells without any incoming neighbours.csv',
-                     mime='text/csv',
+                     file_name='3G Cells without any incoming neighbours.txt'
                  )
         elif selected_page_3 == '3G-LTE CoSite Missing Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -680,10 +654,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-LTE CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='3G-LTE CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '3G-3G CoSite Missing Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -704,10 +677,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-3G CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='3G-3G CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '3G-2G CoSite Missing Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -728,10 +700,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-2G CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='3G-2G CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '3G-3G Multi Carrier Neighbor Cells' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -752,10 +723,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-3G Multi Carrier Neighbor Cells.csv',
-                     mime='text/csv',
+                     file_name='3G-3G Multi Carrier Neighbor Cells.txt'
                  )
         elif selected_page_3 == '3G-2G Multi Carrier Neighbor Cells' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -776,10 +746,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-2G Multi Carrier Neighbor Cells.csv',
-                     mime='text/csv',
+                     file_name='3G-2G Multi Carrier Neighbor Cells.txt'
                  )
         elif selected_page_3 == '3G Invalid Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -802,10 +771,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G Invalid Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='3G Invalid Neighbor Relations.txt',
                  )
         elif selected_page_3 == '3G-3G unidirectional Intra neighboring relationship check in UMTS' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -826,10 +794,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-3G unidirectional Intra neighboring relationship check in UMTS.csv',
-                     mime='text/csv',
+                     file_name='3G-3G unidirectional Intra neighboring relationship check in UMTS.txt',
                  )
         elif selected_page_3 == '3G-3G unidirectional Inter neighboring relationship check in UMTS' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -850,10 +817,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-3G unidirectional Inter neighboring relationship check in UMTS.csv',
-                     mime='text/csv',
+                     file_name='3G-3G unidirectional Inter neighboring relationship check in UMTS.txt',
                  )
         elif selected_page_3 == '3G-2G unidirectional neighboring relationship check in UMTS' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -874,10 +840,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-2G unidirectional neighboring relationship check in UMTS.csv',
-                     mime='text/csv',
+                     file_name='3G-2G unidirectional neighboring relationship check in UMTS.txt',
                  )
         elif selected_page_3 == '3G-LTE unidirectional neighboring relationship check in UMTS' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -898,10 +863,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='3G-LTE unidirectional neighboring relationship check in UMTS.csv',
-                     mime='text/csv',
+                     file_name='3G-LTE unidirectional neighboring relationship check in UMTS.txt'
                  )
     elif selected_page_2 == 'Duplicate_3G_LAC-CI':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -928,10 +892,9 @@ elif selected_page == '3G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='Co-Sector Chip Rate (Tcell) Check.csv',
-                 mime='text/csv',
+                 file_name='Co-Sector Chip Rate (Tcell) Check.txt'
              )
     elif selected_page_2 == 'Power InConsistencies':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -953,10 +916,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Non-Standard CPICH Power Setting (CPICH Power/ Total Power <%5).csv',
-                     mime='text/csv',
+                     file_name='Non-Standard CPICH Power Setting (CPICH Power/ Total Power <%5).txt',
                  )
         elif selected_page_3 == 'Non-Standard CPICH Power Setting (CPICH Power/Total Power  >%15)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -974,10 +936,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Non-Standard CPICH Power Setting (CPICH Power/Total Power  >%15).csv',
-                     mime='text/csv',
+                     file_name='Non-Standard CPICH Power Setting (CPICH Power/Total Power  >%15).txt'
                  )
         elif selected_page_3 == 'maxpwr > maxtxpower  (power mismatch between nodeb &rnc)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -995,10 +956,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='maxpwr > maxtxpower  (power mismatch between nodeb &rnc).csv',
-                     mime='text/csv',
+                     file_name='maxpwr > maxtxpower  (power mismatch between nodeb &rnc).txt'
                  )
         elif selected_page_3 == 'maxpwr < maxtxpower (power mismatch between nodeb &rnc)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1026,10 +986,9 @@ elif selected_page == '3G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='64QAM Switch Check.csv',
-                 mime='text/csv',
+                 file_name='64QAM Switch Check.txt'
              )
     elif selected_page_2 == 'External Definitions Check':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -1050,10 +1009,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definitions Check (BSIC/BCCH) - (3G to 2G).csv',
-                     mime='text/csv',
+                     file_name='External Definitions Check (BSIC/BCCH) - (3G to 2G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1070,10 +1028,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G).csv',
-                     mime='text/csv',
+                     file_name='External Definitions Check (LAC/PSC/DLUARFCN) - (3G to 3G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1090,10 +1047,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G).csv',
-                     mime='text/csv',
+                     file_name='External Definitions Check (PCI/TAC/DLEARFCN) - (3G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (3G to 3G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1110,10 +1066,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definition Check (Redundant Cells) -  (3G to 3G).csv',
-                     mime='text/csv',
+                     file_name='External Definition Check (Redundant Cells) -  (3G to 3G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (3G to 4G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1130,10 +1085,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definition Check (Redundant Cells) -  (3G to 4G).csv',
-                     mime='text/csv',
+                     file_name='External Definition Check (Redundant Cells) -  (3G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (3G to 2G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1150,10 +1104,9 @@ elif selected_page == '3G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definition Check (Redundant Cells) -  (3G to 2G).csv',
-                     mime='text/csv',
+                     file_name='External Definition Check (Redundant Cells) -  (3G to 2G).txt'
                  )
     elif selected_page_2 == 'Radio Data Consistency':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -1170,10 +1123,9 @@ elif selected_page == '3G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='Check Consistency of LOCELL.csv',
-                 mime='text/csv',
+                 file_name='Check Consistency of LOCELL.txt'
              )
 elif selected_page == '2G':
     st.sidebar.title("Category")
@@ -1181,6 +1133,7 @@ elif selected_page == '2G':
     if selected_page_2 == '2G Summary':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2 :
+            st.title("2G Summary Table")
             image = Image.open("summary_2g_v2.png")
             st.image(image)
     elif selected_page_2 == 'BSIC-BCCH Inconsistency':
@@ -1196,18 +1149,15 @@ elif selected_page == '2G':
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "This item shows 2G cell pairs that have the same BCCH value within a 2 km distance"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/Same BCCH Pairs Within 2 km.png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-61'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Same BCCH Pairs Within 2 km.csv',
-                     mime='text/csv',
+                     file_name='Same BCCH Pairs Within 2 km.txt'
                  )
         elif selected_page_3 == 'Same BSIC-BCCH Pairs within 5 km' :
             col1, col2, col3 = st.columns([1, 10, 1])
@@ -1218,18 +1168,15 @@ elif selected_page == '2G':
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "This item shows 2G cell pairs that have the same BCCH-BSIC value pair within a 5 km distance"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/Same BSIC-BCCH Pairs within 5 km.png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-62'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Same BSIC-BCCH Pairs within 5 km.csv',
-                     mime='text/csv',
+                     file_name='Same BSIC-BCCH Pairs within 5 km.txt'
                  )
     elif selected_page_2 == 'Neighbor Relation Discrepancies':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -1290,10 +1237,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='Same BCCH in Source and Neighbors.csv',
-                     mime='text/csv',
+                     file_name='Same BCCH in Source and Neighbors.txt'
                  )
         elif selected_page_3 == "Same BCCH-BSIC Pairs in source Cells' Neighbours" :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1324,10 +1270,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='2G-LTE CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='2G-LTE CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '2G-3G CoSite Missing Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1346,10 +1291,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='2G-3G CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='2G-3G CoSite Missing Neighbor Relations.txt'
                  )
         elif selected_page_3 == '2G-2G CoSite Missing Neighbor Relations' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1368,10 +1312,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='2G-2G CoSite Missing Neighbor Relations.csv',
-                     mime='text/csv',
+                     file_name='2G-2G CoSite Missing Neighbor Relations.txt',
                  )
         elif selected_page_3 == '2G-2G unidirectional neighboring relationship check in GSM' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1390,10 +1333,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='2G-2G unidirectional neighboring relationship check in GSM.csv',
-                     mime='text/csv',
+                     file_name='2G-2G unidirectional neighboring relationship check in GSM.txt',
                  )
         elif selected_page_3 == '2G-3G unidirectional neighboring relationship check in GSM' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1412,10 +1354,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='2G-3G unidirectional neighboring relationship check in GSM.csv',
-                     mime='text/csv',
+                     file_name='2G-3G unidirectional neighboring relationship check in GSM.txt',
                  )
         elif selected_page_3 == '2G-LTE unidirectional neighboring relationship check in GSM' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1434,10 +1375,9 @@ elif selected_page == '2G':
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='2G-LTE unidirectional neighboring relationship check in GSM.csv',
-                     mime='text/csv',
+                     file_name='2G-LTE unidirectional neighboring relationship check in GSM.txt',
                  )
     elif selected_page_2 == 'Power Inconsistency':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -1448,18 +1388,15 @@ elif selected_page == '2G':
             st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                     "Check whether the transmit power on the top of a cabinet is consistent between all TRXs within a cell. The call completion rate of MSs is reduced and power is wasted when the transmit power on the top of a cabinet is inconsistent between the BCCH TRX and TCH TRX."
                     "</p>", unsafe_allow_html=True)
-            image = Image.open("item_png/Check GSMCELL Trx Power Consistency.png")
-            st.image(image,use_column_width=True)
             st.title("RESULTS")
             df = pd.read_sql("""select * from 'ITEM-75'""", con=conn)
             df.drop('index', inplace=True, axis=1)
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='Check GSMCELL Trx Power Consistency.csv',
-                 mime='text/csv',
+                 file_name='Check GSMCELL Trx Power Consistency.txt'
              )
     elif selected_page_2 == 'Cell Frequency not in MA list':
         col1, col2, col3 = st.columns([1, 2, 1])
@@ -1476,10 +1413,9 @@ elif selected_page == '2G':
             st.dataframe(df)
             csv = convert_df(df)
             st.download_button(
-                 label="Download data as CSV",
+                 label="Download data as txt",
                  data=csv,
-                 file_name='Cell Frequency not in MA list.csv',
-                 mime='text/csv',)
+                 file_name='Cell Frequency not in MA list.txt',)
     elif selected_page_2 == 'Cell Frequency not in BA list':
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
@@ -1503,18 +1439,15 @@ elif selected_page == '2G':
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "Check parameter consistency between an LTE source cell on an external M2000 and an LTE external cell on the local M2000. The cells are identified by Cell Name (CELLNAME). The parameters to be checked are as follows: MCC, MNC, CI, Cell TAC (TAC), EARFCN (FREQ), Physical Cell ID (PCID), and EUTRAN Cell Type (EUTRANTYPE)."
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/External Definitions Check (BSIC/BCCH) - (2G to 2G).png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definitions Check (BSIC/BCCH) - (2G to 2G).csv',
-                     mime='text/csv',
+                     file_name='External Definitions Check (BSIC/BCCH) - (2G to 2G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1525,18 +1458,15 @@ elif selected_page == '2G':
                 st.markdown("<p style='text-align: center; color: black; font-size:25px'>"
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G).png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G).csv',
-                     mime='text/csv',
+                     file_name='External Definitions Check (LAC/PSC/DLUARFCN) - (2G to 3G).txt'
                  )
         elif selected_page_3 == 'External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1549,18 +1479,15 @@ elif selected_page == '2G':
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G).png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G).csv',
-                     mime='text/csv',
+                     file_name='External Definitions Check (PCI/TAC/DLEARFCN) - (2G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (2G to 2G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1573,18 +1500,15 @@ elif selected_page == '2G':
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/External Definition Check (Redundant Cells) -  (2G to 2G).png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definition Check (Redundant Cells) -  (2G to 2G).csv',
-                     mime='text/csv',
+                     file_name='External Definition Check (Redundant Cells) -  (2G to 2G).txt',
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (2G to 4G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1597,18 +1521,15 @@ elif selected_page == '2G':
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/External Definition Check (Redundant Cells) -  (2G to 4G).png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definition Check (Redundant Cells) -  (2G to 4G).csv',
-                     mime='text/csv',
+                     file_name='External Definition Check (Redundant Cells) -  (2G to 4G).txt'
                  )
         elif selected_page_3 == 'External Definition Check (Redundant Cells) -  (2G to 3G)' :
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -1621,21 +1542,19 @@ elif selected_page == '2G':
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
                         "</p>", unsafe_allow_html=True)
-                image = Image.open("item_png/External Definition Check (Redundant Cells) -  (2G to 3G).png")
-                st.image(image,use_column_width=True)
                 st.title("RESULTS")
                 df = pd.read_sql("""select * from 'ITEM-28'""", con=conn)
                 df.drop('index', inplace=True, axis=1)
                 st.dataframe(df)
                 csv = convert_df(df)
                 st.download_button(
-                     label="Download data as CSV",
+                     label="Download data as txt",
                      data=csv,
-                     file_name='External Definition Check (Redundant Cells) -  (2G to 3G).csv',
-                     mime='text/csv',
+                     file_name='External Definition Check (Redundant Cells) -  (2G to 3G).txt',
                  )
 
 
 #summary_table_2g.png
 #os.system(os.system("streamlit run C:/Users/hasan.acar/PycharmProjects/Discrepancy_check_streamlit/main.py"))
 #exit("main.py")
+
